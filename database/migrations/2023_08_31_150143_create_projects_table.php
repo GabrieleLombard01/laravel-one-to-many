@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('slug')->unique();
             $table->string('thumb', 400)->nullable();
-            $table->string('category', 100);
+            // $table->string('category', 100);
             $table->string('status', 80);
             $table->timestamps();
             $table->softDeletes();

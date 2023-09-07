@@ -29,7 +29,7 @@ class UpdateProjectRequest extends FormRequest
             'title' => ['required', 'string', 'max:100', Rule::unique('projects')->ignore($id)],
             'description' => 'required|string',
             'thumb' => 'nullable|image:jpg,jpeg,png',
-            'category' => 'required|string',
+            //'category' => 'required|string',
             'status' => 'required|string'
         ];
     }
@@ -48,7 +48,7 @@ class UpdateProjectRequest extends FormRequest
 
                 'status.required' => "Attenzione! Lo stato è obbligatorio",
 
-                'category.required' => "Attenzione! Almeno un linguaggio è obbligatorio"
+                //'category.required' => "Attenzione! Almeno un linguaggio è obbligatorio"
             ];
     }
 }

@@ -25,7 +25,7 @@ class StoreProjectRequest extends FormRequest
             'title' => ['required', 'string', 'max:100', 'unique:projects'],
             'description' => 'required|string',
             'thumb' => 'nullable|image:jpg,jpeg,png',
-            'category' => 'required|string',
+            //'category' => 'required|string',
             'status' => 'required|string'
         ];
     }
@@ -44,7 +44,7 @@ class StoreProjectRequest extends FormRequest
 
                 'status.required' => "Attenzione! Lo stato è obbligatorio",
 
-                'category.required' => "Attenzione! Almeno un linguaggio è obbligatorio"
+                //'category.required' => "Attenzione! Almeno un linguaggio è obbligatorio"
             ];
     }
 }

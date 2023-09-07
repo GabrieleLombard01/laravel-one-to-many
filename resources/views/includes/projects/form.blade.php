@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="col-9">
+    {{-- <div class="col-9">
         <div class="mb-3">
             <label for="category" class="form-label">Linguaggi:</label>
             <input type="text" required
@@ -75,7 +75,7 @@
                 </div>
             @enderror
         </div>
-    </div>
+    </div> --}}
 
     <div class="col-11">
         <div class="mb-3">
