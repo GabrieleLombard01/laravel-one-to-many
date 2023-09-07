@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
+use App\Models\Type;
 use Faker\Generator;
 
-class CategorySeeder extends Seeder
+class TypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,10 +17,10 @@ class CategorySeeder extends Seeder
         $labels = ['FrontEnd', 'BackEnd', 'FullStack', 'UI/UX', 'Design'];
 
         foreach ($labels as $label) {
-            $category = new Category();
-            $category->label = $label;
-            $category->color = $faker->hexColor();
-            $category->save();
+            $type = new Type();
+            $type->label = $label;
+            $type->color = $faker->hexColor();
+            $type->save();
         }
     }
 }
