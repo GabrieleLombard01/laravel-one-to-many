@@ -1,0 +1,30 @@
+/*SHOW:*/
+#show .btn{
+    background-color: #003500;
+    color: white;
+    border: solid white 1px;
+}
+#show a{
+    text-decoration: none;
+}
+.myBtn{
+    color: white;
+    background-color: #003500;
+    padding: 3px 8px;
+    border: solid white 1px;
+}
+
+/*CARD:*/
+.card{
+    background-color: #c7e0d0;
+}
+
+/*Pseudo-cleasses:*/
+.myBtn:hover{
+    color: #c7e0d0;
+    background-color: #001c00;
+}
+.myBtn:active{
+    color: #0cd756;
+    background-color: #001c00;
+}

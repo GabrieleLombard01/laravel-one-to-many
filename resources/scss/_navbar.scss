@@ -1,0 +1,11 @@
+/*HEADER:*/
+.nav_box{
+   background-image: linear-gradient(rgb(0, 53, 0) 70%, #267040 5%);
+}
+.dropdown-menu{
+    background-color: rgba(0, 53, 0, 0.906);
+}
+/*pseudo-classes*/
+.dropdown-item:hover{
+    background-color: rgb(0, 36, 0);
+}
