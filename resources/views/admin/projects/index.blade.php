@@ -14,7 +14,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Slug</th>
-                <th scope="col">Linguaggi</th>
+                {{-- <th scope="col">Linguaggi</th> --}}
+                <th scope="col">Type</th>
                 <th scope="col">Stato</th>
                 <th></th>
             </tr>
@@ -25,7 +26,14 @@
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
                     <td>{{ $project->slug }}</td>
-                    <td>{{ $project->category }}</td>
+                    {{-- <td>{{ $project->category }}</td> --}}
+                    <td>
+                        @if ($project->type)
+                            {{ $project->type->label }}
+                        @else
+                            -
+                        @endif
+                    </td>
                     <td>{{ $project->status }}</td>
                     <td>
                         <div class="d-flex justify-content-end h-100">

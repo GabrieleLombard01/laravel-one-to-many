@@ -21,7 +21,14 @@
                 <div class="col-md-9">
                     <div class="card-body">
                         <p class="card-text">{{ $project->description }}</p>
-                        <p class="card-text"><small class="text-muted">{{ $project->category }}</small></p>
+                        <p class="card-text text-muted">
+                            @if ($project->type)
+                                {{ $project->type->label }}
+                            @else
+                                -
+                            @endif
+                        </p>
+                        {{-- <p class="card-text"><small class="text-muted">{{ $project->category }}</small></p> --}}
                         <p class="card-text"><small class="text-muted">{{ $project->status }}</small></p>
                     </div>
                 </div>

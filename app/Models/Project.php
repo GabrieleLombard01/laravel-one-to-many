@@ -12,12 +12,17 @@ class Project extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['title', 'description', 'slug', 'thumb', 'category', 'status'];
+    protected $fillable = ['title', 'description', 'slug', 'thumb', 'status'];
 
     public function thumb(): Attribute
     {
         return Attribute::make(
             get: fn (?string $value) => $value ? asset('storage/' . $value) : asset('storage/default.jpg')
         );
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
     }
 }
