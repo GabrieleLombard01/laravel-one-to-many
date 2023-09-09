@@ -12,7 +12,7 @@ class Project extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['title', 'description', 'slug', 'thumb', 'status'];
+    protected $fillable = ['title', 'description', 'slug', 'thumb', 'status', 'type_id'];
 
     public function thumb(): Attribute
     {

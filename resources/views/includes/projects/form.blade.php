@@ -77,7 +77,23 @@
         </div>
     </div> --}}
 
-    <div class="col-11">
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="type" class="form-label">Tipi:</label>
+            <select class="form-select"
+                @error('type_id') is-invalid @elseif(old('type_id')) is-valid @enderror id="type"
+                name="type_id">
+
+            </select>
+            @error('type_id')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+    </div>
+
+    <div class="col-5">
         <div class="mb-3">
             <label for="thumb" class="form-label">Copertina:</label>
             <input type="file" name="thumb"
