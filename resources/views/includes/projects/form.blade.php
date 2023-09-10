@@ -77,13 +77,16 @@
         </div>
     </div> --}}
 
-    <div class="col-6">
+    <div class="col-2">
         <div class="mb-3">
             <label for="type" class="form-label">Tipi:</label>
             <select class="form-select"
                 @error('type_id') is-invalid @elseif(old('type_id')) is-valid @enderror id="type"
                 name="type_id">
-
+                <option value="">Nessuna</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->label }}</option>
+                @endforeach
             </select>
             @error('type_id')
                 <div class="invalid-feedback">

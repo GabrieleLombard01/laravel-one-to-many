@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Projects\StoreProjectRequest;
 use App\Http\Requests\Projects\UpdateProjectRequest;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -30,7 +31,8 @@ class ProjectController extends Controller
     public function create()
     {
         $project = new Project();
-        return view('admin.projects.create', compact('project'));
+        $types = Type::select('id', 'label')->get();
+        return view('admin.projects.create', compact('project', 'types'));
     }
 
     /**
@@ -70,7 +72,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $types = Type::select('id', 'label')->get();
+        return view('admin.projects.edit', compact('project', 'types'));
     }
 
     /**
