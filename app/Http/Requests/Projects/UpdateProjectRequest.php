@@ -30,7 +30,9 @@ class UpdateProjectRequest extends FormRequest
             'description' => 'required|string',
             'thumb' => 'nullable|image:jpg,jpeg,png',
             //'category' => 'required|string',
-            'status' => 'required|string'
+            'status' => 'required|string',
+            'type_id' => 'nullable|exists:types,id'
+
         ];
     }
 
@@ -49,6 +51,8 @@ class UpdateProjectRequest extends FormRequest
                 'status.required' => "Attenzione! Lo stato è obbligatorio",
 
                 //'category.required' => "Attenzione! Almeno un linguaggio è obbligatorio"
+
+                'type_id.exists' => 'Il tipo indicato non esiste!'
             ];
     }
 }
